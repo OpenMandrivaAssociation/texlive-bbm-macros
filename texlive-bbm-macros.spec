@@ -1,3 +1,9 @@
+# revision 17224
+# category Package
+# catalog-ctan /macros/latex/contrib/bbm
+# catalog-date 2010-02-15 23:28:51 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-bbm-macros
 Version:	20100215
 Release:	1
@@ -49,6 +55,7 @@ math alphabets for using the fonts within maths.
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.drv
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.dtx
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ math alphabets for using the fonts within maths.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
