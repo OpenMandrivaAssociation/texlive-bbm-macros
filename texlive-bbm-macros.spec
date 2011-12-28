@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 Provides LaTeX support for Blackboard variants of Computer
@@ -28,20 +25,12 @@ Modern fonts. Declares a font family bbm so you can in
 principle write running text in blackboard bold, and lots of
 math alphabets for using the fonts within maths.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -56,7 +45,6 @@ math alphabets for using the fonts within maths.
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.drv
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.dtx
 %doc %{_texmfdistdir}/source/latex/bbm-macros/bbm.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,5 +55,3 @@ math alphabets for using the fonts within maths.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
