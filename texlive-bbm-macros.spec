@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-bbm-macros
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	LaTeX support for "blackboard-style" cm fonts
 Group:		Publishing
