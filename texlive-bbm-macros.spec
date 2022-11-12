@@ -1,19 +1,13 @@
-# revision 17224
-# category Package
-# catalog-ctan /macros/latex/contrib/bbm
-# catalog-date 2010-02-15 23:28:51 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-bbm-macros
-Version:	20190228
+Version:	17224
 Release:	1
 Summary:	LaTeX support for "blackboard-style" cm fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bbm
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.r17224.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.doc.r17224.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.source.r17224.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ principle write running text in blackboard bold, and lots of
 math alphabets for using the fonts within maths.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,25 +42,11 @@ math alphabets for using the fonts within maths.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100215-2
-+ Revision: 749507
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100215-1
-+ Revision: 717890
-- texlive-bbm-macros
-- texlive-bbm-macros
-- texlive-bbm-macros
-- texlive-bbm-macros
-- texlive-bbm-macros
-
