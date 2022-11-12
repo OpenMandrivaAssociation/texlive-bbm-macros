@@ -5,9 +5,9 @@ Summary:	LaTeX support for "blackboard-style" cm fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bbm
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.r17224.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.doc.r17224.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.source.r17224.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
