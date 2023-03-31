@@ -1,6 +1,6 @@
 Name:		texlive-bbm-macros
 Version:	17224
-Release:	1
+Release:	2
 Summary:	LaTeX support for "blackboard-style" cm fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bbm
