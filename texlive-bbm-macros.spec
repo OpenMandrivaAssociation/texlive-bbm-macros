@@ -3,7 +3,7 @@ Version:	17224
 Release:	2
 Summary:	LaTeX support for "blackboard-style" cm fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bbm
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bbm
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bbm-macros.doc.r%{version}.tar.xz
